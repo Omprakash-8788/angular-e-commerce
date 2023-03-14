@@ -1,0 +1,86 @@
+<div class="top-container">
+  <div style="padding-top: 1cm; padding-left: 1.2cm">
+    <h2 class="contact">Contact</h2>
+
+    <form
+      [formGroup]="loginForm"
+      (ngSubmit)="loginUser()"
+      style="padding-top: 0.5cm"
+    >
+      <div class="input-field">
+        <section>
+          <input
+            class="input-name"
+            formControlName="name"
+            name="userName"
+            #first_name
+            type="text"
+            placeholder="Enter your name..."
+          /><br />
+          <span style="color: red" *ngIf="name && name.invalid && name.touched"
+            >Fill the required data</span
+          ><br />
+        </section>
+        <section>
+          <input
+            class="input-name"
+            type="email"
+            formControlName="email"
+            placeholder="Enter your email..."
+          /><br />
+          <span
+            style="color: red"
+            *ngIf="email && email.invalid && email.touched"
+            >Fill the required data</span
+          ><br />
+        </section>
+      </div>
+      <br />
+      <div class="subject-message">
+        <section>
+          <input
+            class="input"
+            type="text"
+            #first_name
+            formControlName="subject"
+            placeholder="Enter the subject..."
+          /><br />
+          <span
+            style="color: red"
+            *ngIf="subject && subject.invalid && subject.touched"
+            >Enter the required data</span
+          ><br />
+        </section>
+      </div>
+      <br />
+      <div class="subject-message">
+        <section>
+          <textarea
+            type="text"
+            placeholder="Enter the message..."
+            formControlName="message"
+            class="input-message"
+          ></textarea
+          ><br />
+          <span
+            style="color: red"
+            *ngIf="message && message.invalid && message.touched"
+            >Enter the required data</span
+          ><br />
+        </section>
+      </div>
+      <br />
+      <div class="subject-message">
+        <button
+          class="btn btn-icon button-transparent"
+          [disabled]="loginForm.invalid"
+          class="button"
+          (click)="submit(first_name.value)"
+        >
+          Send
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+<router-outlet></router-outlet>

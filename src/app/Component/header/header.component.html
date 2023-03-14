@@ -1,0 +1,43 @@
+<header class="top-navbar">
+  <div class="navbar navbar-dark bg-primary shadow-sm">
+    <div class="navbar-brand align-item-center d-flex">
+      &nbsp;&nbsp; &nbsp;
+      <strong class="name">Om Prakash</strong>
+      <div class="form-group">
+        <input 
+          type="text"
+          [(ngModel)]="searchTerm"
+          (keyup)="search($event)"
+          class="form-control"
+          placeholder="search products...."
+        />
+      </div>
+      <span class="search-icon"><mat-icon>search</mat-icon></span>
+    </div>
+    <section>
+      <ul class="ul">
+        <li class="li">
+          <a style="color: white" routerLink="/products">Home</a>
+        </li>
+        <li class="li">
+          <a style="color: white" routerLink="/about">About</a>
+        </li>
+        <li class="li">
+          <a style="color: white" routerLink="/contact">Contact</a>
+        </li>
+        <li>
+          <button mat-button routerLink="cart">
+            <mat-icon class="mat-icon"
+              matBadgeOverlap="false"
+              matBadgeSize="small"
+              matBadgeColor="warn"
+              style="font-size: 45px; height: 55px; width: 45px; color: white"
+              >shop</mat-icon
+            >
+            <p class="badges">{{ totalItem }}</p>
+          </button>
+        </li>
+      </ul>
+    </section>
+  </div>
+</header>

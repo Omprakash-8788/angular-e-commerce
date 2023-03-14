@@ -1,0 +1,128 @@
+.form-control {
+  border-radius: 3px;
+  width: 600px;
+  margin-left: 20px;
+}
+
+.search-icon {
+  /* position:absolute;
+    z-index: 10;
+    right: 50%;
+    top: 20px;
+    color: blue;
+    padding-left: -20px; */
+  color:blue;
+  position: absolute;
+  right: 50%;
+  top: 20px;
+  z-index: 10;
+}
+.name {
+  padding-left: 10px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  
+}
+
+
+.ul {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  margin: 0 100px 0 0;
+}
+.li {
+  margin: 0px 40px 2px 0px;
+  color: white;
+}
+
+.icon-size {
+  height: 50px;
+  width: 50px;
+}
+
+/* .icons{
+  height: 100px;
+  width: 100px;
+  color: black;
+} */
+/* .badge {
+  padding-right: 50px;
+  font-size: 95px;
+  color: black;
+} */
+
+.demo-section + .demo-section {
+  margin-top: 160px;
+  font-size: 8px;
+}
+.md-badge {
+  position: absolute;
+  top: 28px;
+  right: 30px;
+  color: white;
+}
+
+mat-badge-medium.mat-badge-above .mat-badge-content {
+  top: unset;
+  right: unset;
+}
+
+.badges {
+  /* color: red;
+  right: 25%;
+  size: 100px;
+  font-size: 40px; */
+  padding-right: 50px;
+  font-size: 25px;
+  color: red;
+}
+
+.demo-section + .demo-section {
+  margin-top: 16px;
+}
+
+
+
+
+@media (max-width: 400px) {
+  .navbar .bg{
+    max-width: 85em;
+    background-color: rgb(26, 24, 24);
+  }
+  .name {
+    font-size: 15px;
+    margin: 0;
+    padding-top: 3px;
+  }
+  
+  .search-icon {
+    display: none;
+  }
+  .form-control {
+    max-width: 18em;
+    font-size: 12px;
+  }
+  .ul {
+    display: flex;
+    font-size: 15px;
+    margin: 0;
+    padding: 10px 0 0 5px;
+  }
+  .mat-icon{
+    size: 10px;
+  }
+  .badges{
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    right: 20%;
+    bottom: 20%;
+  }
+}
+
+@media only screen and (max-width: 768px) and (min-width: 401px)  {
+  .search-icon{
+    display: block;
+  }
+}

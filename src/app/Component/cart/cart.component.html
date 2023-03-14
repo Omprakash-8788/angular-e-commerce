@@ -1,0 +1,93 @@
+<ng-container *ngIf="products.length != 0">
+  <div class="container">
+    <div class="card-table">
+      <div class="cart-product">
+        <table class="table table-responsive">
+          <thead>
+            <tr>
+              <th class="sr-no">Sr. No</th>
+              <th>Product Name</th>
+              <th>Product Image</th>
+              <th>Description</th>
+              <th class="sr-no">Price</th>
+              <th class="sr-no">Quantity</th>
+              <th class="sr-no">Total</th>
+              <th class="sr-no">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of products; let i = index">
+              <td class="sr-no">{{ i + 1 }}</td>
+              <td>{{ item.title }}</td>
+              <td><img width="120px" src="{{ item.image }}" /></td>
+              <td style="width: 50%">{{ item.description  }}</td>
+              <td class="sr-no" style="width: 12%">{{ item.price }}</td>
+              <td class="sr-no" style="width: 12%">{{ item.quantity }}</td>
+              <td class="sr-no" style="width: 12%">{{ item.total }}</td>
+              <td class="sr-no">
+                <button (click)="removeItem(item)" class="btn btn-danger">
+                  Delete
+                </button>
+              </td>
+              
+            </tr>
+            
+            <tr>
+              <td colspan="1"></td>
+              <td class="button-group">
+                <button (click)="emptycart()" class="btn btn-danger">
+                  Empty Cart
+                </button>
+              </td>
+              <td>
+                <button routerLink="/products" class="btn btn-primary">
+                  Shop more
+                </button>
+              </td>
+              <td class="sr-no"><button class="btn btn-success">{{grandTotal}}</button></td>
+              <td class="grand-total">
+                <strong>Grand Total: ${{ grandTotal }}</strong>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</ng-container>
+
+<ng-container *ngIf="products.length == 0">
+  <div class="container">
+    <div class="card">
+      <h5 class="card-title">My Cart</h5>
+    </div>
+    <div class="center">
+      <img
+        src="data:image/png;base64,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"
+      />
+      <h4>Your cart is empty</h4>
+      <h6>Add item to it</h6>
+      <button class="btn btn-primary" routerLink="/products">Shop Now</button>
+    </div>
+  </div>
+</ng-container>
+
+<ng-container *ngIf="show">
+  <div class="smal-container">
+    <div>
+      <h2>Product Image</h2>
+      <h2>descriptino</h2>
+    </div>
+    <div>
+      <h2>price</h2>
+      <h2>Quantity</h2>
+    </div>
+    <div>
+      <button>Empty</button>
+      <button>Show More</button>
+      <button>Total</button>
+    </div>
+
+  </div>
+
+</ng-container>

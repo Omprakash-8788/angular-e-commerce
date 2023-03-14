@@ -1,0 +1,22 @@
+.top-container {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  padding-top: 2.5cm;
+  font-size: 0.6cm;
+  padding-left: 6cm;
+  padding-right: 4cm;
+  line-height: 1cm;
+  margin-bottom: 4cm;
+}
+
+::selection{
+  background-color: black;
+  color: rgb(210, 13, 13);
+}
+@media (max-width: 400px){
+  .top-container{
+    margin: 0;
+    padding: 10px 0 0 15px;
+    font-size: 15px;
+  }
+  
+}

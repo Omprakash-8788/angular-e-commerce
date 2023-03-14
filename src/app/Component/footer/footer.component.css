@@ -1,0 +1,46 @@
+.top-container {
+  flex: 1;
+  display: flex;
+  background-color:#516395;
+  
+  color: white;
+  justify-content: space-around;
+  height: 7cm;
+  padding: 1cm 2cm 0cm 3cm;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  width: 100%;
+}
+
+.ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
+  padding: 0;
+  color: white;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.bottom-container {
+  background-color: black;
+  height: 2cm;
+}
+
+@media (max-width: 400px) {
+  .top-container {
+    display: block;
+    height: 17cm;
+   
+   margin: 0;
+   padding: 20px 0 0 20px;
+  }
+  .bottom-container {
+    height: auto;
+  }
+  .ul {
+    display: block;
+    color: rgb(249, 247, 247);
+    position: relative;
+    margin: 0;
+    padding: 10px 0 0 20px;
+  }
+}
