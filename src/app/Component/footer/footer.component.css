@@ -1,7 +1,10 @@
 .top-container {
   flex: 1;
   display: flex;
-  background-color:#516395;
+  background: 
+    radial-gradient(
+     at center, #3498db, #9b59b6
+    );
   
   color: white;
   justify-content: space-around;

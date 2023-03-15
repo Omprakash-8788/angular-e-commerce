@@ -8,6 +8,10 @@
   padding: 20px;
   margin: 30px;
   padding-left: 2px;
+  background: 
+    radial-gradient(
+     at center, #3498db, #9b59b6
+    );
 }
 
 .top-container {
@@ -20,7 +24,9 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  color: white;
 }
+
 
 .loading {
   padding: 6cm 8cm 20cm 18cm;

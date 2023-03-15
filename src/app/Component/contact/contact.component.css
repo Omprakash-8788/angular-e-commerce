@@ -1,16 +1,21 @@
 .top-container {
   margin: 2cm 3cm 3cm 10cm;
-  background-color: rgb(47, 47, 112);
+  background: 
+    radial-gradient(
+     at center, #3498db, #9b59b6
+    );
   height: 15cm;
   width: 20cm;
   border-radius: 30px;
 }
 
 .contact {
-  padding-left: 270px;
+  padding-left: 250px;
   color: white;
   font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 40px;
+  border-bottom: 1px solid #a7bcff;
+  
 }
 
 .input-field {
